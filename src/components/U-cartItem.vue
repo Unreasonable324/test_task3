@@ -3,11 +3,9 @@
   <div class="sub-categoty-item-data">
     <div class="category_name_item">{{ categoryName }}</div>
     <div class="present_name_item">{{ present_name }}</div>
-
     <div class="sub_data_item">
       <div class="comment_name_item">{{ comment_name }}</div>
       <div class="price_item">{{ price }} ₽</div>
-
       <UButton
         :class="{ btn_enabled: conditionsButton.allowed || conditionsButton.available }"
         >{{
@@ -65,7 +63,6 @@ export default {
   flex-direction: column;
   padding: 0 32px 25px 32px;
   text-align: center;
-  /* height: 100%; */
   flex: 1;
 }
 .category_name_item {

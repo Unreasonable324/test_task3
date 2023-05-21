@@ -35,7 +35,6 @@ body{
     margin: 0 auto;
 }
 [class*="title"] p{
-    /* margin: 35px 0 20px 0; */
     font-weight: 600;
     font-size: 44px;
 }

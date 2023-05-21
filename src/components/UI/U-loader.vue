@@ -22,7 +22,11 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* background: rgba(255, 0, 0, 0.535); */
+  background: whitesmoke;
+  padding: 15px;
+  box-shadow: 0px 2px 10px rgba(151, 151, 151, 0.2);
+  border-radius:5px;
+  border: 1px solid rgb(227, 227, 227);
   display: flex;
   flex-direction: column;
   gap: 10px;

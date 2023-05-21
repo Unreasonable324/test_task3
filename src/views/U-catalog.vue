@@ -44,7 +44,6 @@ export default {
     return {
       catalogArray: [],
       isLoader: true,
-      // styleCatalogItem: `background-image: url(${})`
     };
   },
   props: {},
@@ -53,7 +52,6 @@ export default {
   },
   methods: {
     dataCatalog(data) {
-      console.log("data", data);
       this.catalogArray = data;
       if (this.catalogArray !== undefined) this.isLoader = false;
     },
@@ -62,15 +60,7 @@ export default {
 </script>
 
 <style>
-/* .wrapper-catalog {
-}
-.catalog_container {
-} */
-/* .catalog_title p {
-  margin: 35px 0 20px 0;
-  font-weight: 600;
-  font-size: 44px;
-} */
+
 .wrapper-catalog-items {
   display: flex;
   flex-wrap: wrap;
@@ -85,6 +75,9 @@ export default {
   font-weight: 600;
   font-size: 24px;
   transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  
 }
 .wrapper-catalog_item:hover {
   transform: scale(1.05);

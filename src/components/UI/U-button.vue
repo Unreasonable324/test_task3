@@ -13,9 +13,6 @@ export default {
     isActive: {
       type: Boolean,
     },
-    // btnText: {
-    //   type: String,
-    // },
   },
   methods: {},
 };
@@ -32,16 +29,14 @@ export default {
   justify-content: center;
   letter-spacing: 1.75px;
   text-transform: uppercase;
-  cursor: pointer;
   color: #acacac;
+  cursor: not-allowed;
 }
-.btn_disabled {
-  /* color: #acacac; */
-}
+
 .btn_enabled {
   z-index: 2;
   position: relative;
-  /* overflow: hidden; */
+  cursor: pointer;
   color: #ffffff;
   background: linear-gradient(270deg, #ffa800 0%, #ff6f00 60.2%);
 }
@@ -52,12 +47,6 @@ export default {
   top: 10px;
   width: 85%;
   height: 90%;
-  /* background: linear-gradient(
-    270deg,
-    rgba(255, 168, 0, 0.6) 0%,
-    rgba(255, 111, 0, 0.6) 100%
-  );
-  filter: blur(13.5914px); */
 }
 .btn_enabled:hover::after {
   background: linear-gradient(
@@ -67,12 +56,4 @@ export default {
   );
   filter: blur(13.5914px);
 }
-/* .btn_enabled:hover {
-  background: linear-gradient(
-    270deg,
-    rgba(255, 168, 0, 0.6) 0%,
-    rgba(255, 111, 0, 0.6) 100%
-  );
-  filter: blur(13.5914px);
-} */
 </style>

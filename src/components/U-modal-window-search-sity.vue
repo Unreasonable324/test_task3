@@ -42,7 +42,7 @@
             }
           "
         >
-          Подтвердить 
+          Подтвердить
         </UButton>
       </div>
     </div>
@@ -59,7 +59,6 @@ export default {
   data() {
     return {
       isActive: false,
-      // isSitySearch: true,
       foundCities: [],
       sitySearch: "",
       sityId: "",
@@ -67,17 +66,7 @@ export default {
     };
   },
   props: {},
-  // mounted() {
-  //   console.log(localStorage);
-  //   if (localStorage.sityId !== this.sityId) {
-  //     this.sityId = localStorage.sityId;
-  //   }
-  // },
-  // watch: {
-  //   sityId(newName) {
-  //     localStorage.sityId = newName;
-  //   },
-  // },
+
   methods: {
     input() {
       this.sityId = "";
@@ -85,6 +74,7 @@ export default {
         .get(`https://nlstar.com/ru/api/catalog3/v1/city/?term=${this.sitySearch}`)
         .then((response) => (this.foundCities = response.data.data))
         .catch(() => {
+          console.log("error");
           this.foundCities = [];
         });
     },
@@ -93,8 +83,6 @@ export default {
       this.sitySearch = sitylabel;
       this.sityId = sityId;
       this.sityName = sityName;
-      console.log(sityId);
-      console.log(this.sityId.length);
     },
   },
 };
@@ -110,7 +98,6 @@ export default {
   bottom: 0%;
   background: #35364780;
   mix-blend-mode: normal;
-  /* opacity: 0.8; */
 }
 .wrapper_modal_window_body {
   position: relative;
@@ -157,17 +144,13 @@ export default {
   width: 100%;
 }
 .wrapper-search_sity input {
-  /* width: 540px; */
   width: 100%;
   height: 48px;
-  /* padding: 12px; */
   background: #ffffff;
   border: none;
-  /* border: 1px solid rgba(151, 151, 151, 0.5); */
   border-radius: 5px;
   font-weight: 400;
   font-size: 18px;
-  /* outline: 1px solid #272727; */
 }
 .wrapper-search_sity input:focus {
   outline: none;
@@ -199,25 +182,18 @@ export default {
   /* Most modern browsers support this now. */
   color: #979797;
 }
-.wrapper-input-and-found-sities {
-  /* width: 100%; */
-}
+
 .wrapper-found-sities {
   position: relative;
   width: 540px;
   padding: 0 12px;
-
   background: #fff;
-  /* width: 100%; */
-  /* border: 1px solid #272727; */
   border: 1px solid rgba(151, 151, 151, 0.5);
-
   border-radius: 5px;
 }
 .found-sities {
   width: 100%;
   max-height: 190px;
-  /* padding: 0 12px; */
   overflow-y: auto;
   border-top: 1px solid rgba(151, 151, 151, 0.3);
 }
@@ -232,9 +208,7 @@ export default {
 .found-city:hover {
   color: #000;
 }
-.wrapper-found-sities .found-city:first-child {
-  /* border-top: 1px solid rgba(151, 151, 151, 0.3); */
-}
+
 .found-sities::-webkit-scrollbar {
   width: 8px;
 }

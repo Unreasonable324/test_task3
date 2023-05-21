@@ -20,7 +20,6 @@
 
 <script>
 import axios from "axios";
-// import { response } from "express";
 import UModalWindowSearchSity from "./U-modal-window-search-sity";
 export default {
   components: { UModalWindowSearchSity },
@@ -65,9 +64,6 @@ export default {
       this.getAxios();
     },
     getAxios() {
-      console.log("getaxios");
-      console.log(this.catalogArray);
-
       axios
         .get(`https://nlstar.com/ru/api/catalog3/v1/menutags/?city_id=${this.sityId}`)
         .then((response) => {
